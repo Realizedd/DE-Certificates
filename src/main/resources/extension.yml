@@ -2,5 +2,5 @@ name: Certificates
 version: @VERSION@
 main: me.realized.de.certificates.Certificates
 authors: [Realized]
-description: Award winners with a certificate item!
+description: Award duel winners with a certificate item!
 website: Not released yet
