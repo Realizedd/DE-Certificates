@@ -3,4 +3,4 @@ version: @VERSION@
 main: me.realized.de.certificates.Certificates
 authors: [Realized]
 description: Award duel winners with a certificate item!
-website: Not released yet
+website: https://www.spigotmc.org/resources/duels-extension-certificates.59352/
