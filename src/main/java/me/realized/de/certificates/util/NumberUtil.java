@@ -1,4 +1,4 @@
-package me.realized.duels.util;
+package me.realized.de.certificates.util;
 
 import java.util.OptionalInt;
 

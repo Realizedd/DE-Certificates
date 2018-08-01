@@ -1,10 +1,7 @@
-package me.realized.duels.util.compat;
+package me.realized.de.certificates.util.compat;
 
 import org.bukkit.inventory.ItemStack;
 
-/**
- * Prevents players from keeping kit contents by removing items with the given key on click/interact/pickup
- */
 public final class Tags extends CompatBase {
 
     private Tags() {}

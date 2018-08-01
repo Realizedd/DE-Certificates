@@ -1,22 +1,12 @@
-types:
-  HEAD:
-    loading: '&cLoading...'
-    no-data: '&cNo data.'
-    sign-format:
-    - '&f%name%'
-    - '&e#%rank%'
-    - '&a%value% &f%identifier%'
-    - '&9&m-------------'
-  HOLOGRAM:
-    loading: '&cLeaderboard is loading...'
-    no-data: '&cNo data available.'
-    header: '&9&m-------&r &7Top &f10 &7%type% &9&m-------&r'
-    line-format: '&e%rank%. &f%name% &7- &a%value% &7%identifier%'
-    footer: '&9&m-------&r &7Top &f10 &7%type% &9&m-------&r'
-    space-between-lines: 0.05
-  SIGN:
-    loading: '&cLoading...'
-    no-data: '&cNo data.'
-    header: '&fTop &910 &f%type%'
-    space-between: true
-    sign-line-format: '&e#%rank% %name%'
+certificate-item:
+  type: PAPER
+  # Available Placeholders:
+  # %winner%, %loser%, %kit%, %arena%, %bet%, %time%
+  name: '&bDuel Certificate'
+  lore:
+  - '&c%loser% &7was defeated by'
+  - '&a%winner% &7in a duel with kit &3%kit%'
+  - '&7on &f%date%&7.'
+
+# Tutorial: https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+date-format: 'E, dd MMM yyyy HH:mm:ss'

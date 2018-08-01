@@ -1,4 +1,4 @@
-package me.realized.duels.util.compat;
+package me.realized.de.certificates.util.compat;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
