@@ -62,16 +62,21 @@ public class Certificates extends DuelsExtension implements Listener {
 
         this.certificate = Tags.setKey(certificate, NBT_TAG_NAME);
         this.format = config.isString("date-format") ? new SimpleDateFormat(config.getString("date-format")) : new SimpleDateFormat();
-        api.getServer().getPluginManager().registerEvents(this, api);
-    }
-
-    private void error(final String s) {
-        api.error("[" + getName() + " Extension] " + s);
+        api.registerListener(this);
     }
 
     @Override
     public void onDisable() {
         opponents.clear();
+    }
+
+    @Override
+    public String getRequiredVersion() {
+        return "3.1.2";
+    }
+
+    private void error(final String s) {
+        api.error("[" + getName() + " Extension] " + s);
     }
 
     @EventHandler
