@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.UUID;
 import me.realized.de.certificates.util.ItemUtil;
 import me.realized.de.certificates.util.StringUtil;
-import me.realized.de.certificates.util.compat.Tags;
+import me.realized.de.certificates.util.compat.Identifiers;
 import me.realized.duels.api.event.match.MatchEndEvent;
 import me.realized.duels.api.event.match.MatchStartEvent;
 import me.realized.duels.api.extension.DuelsExtension;
@@ -24,8 +24,6 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class Certificates extends DuelsExtension implements Listener {
-
-    private static final String NBT_TAG_NAME = "DuelCertificateItem";
 
     private final Map<UUID, String> opponents = new HashMap<>();
 
@@ -60,7 +58,7 @@ public class Certificates extends DuelsExtension implements Listener {
             ItemUtil.editMeta(certificate, meta -> meta.setLore(StringUtil.color(itemSection.getStringList("lore"))));
         }
 
-        this.certificate = Tags.setKey(certificate, NBT_TAG_NAME);
+        this.certificate = Identifiers.addIdentifier(certificate, api);
         this.format = config.isString("date-format") ? new SimpleDateFormat(config.getString("date-format")) : new SimpleDateFormat();
         api.registerListener(this);
     }
